@@ -1,23 +1,35 @@
 import { User } from './index';
 
+export class Forum {
+    public id: number;
+    public name: string;
+    public avatar: URL;
+    public firstClass: string;
+    public secondClass: string;
+    public memberCount: number;
+    public memberName: string;
+    public postNum: number;
+}
+
 export class Post {
-    id: number;
-    user: User;
-    replies: Reply[] = new Array<Reply>();
-    time: Date;
+    public id: number;
+    public forum: Forum = new Forum();
+    public user: User;
+    public replies: Reply[] = new Array<Reply>();
+    public time: Date;
 }
 
 export class Reply {
-    id: number;
-    index: number;
-    user: User;
-    content: string;
-    comments: Comment[];
-    time: Date;
+    public id: number;
+    public index: number;
+    public user: User;
+    public content: string;
+    public comments: Comment[];
+    public time: Date;
 }
 
 export class Comment {
-    user: User;
-    content: string;
-    time: Date;
+    public user: User;
+    public content: string;
+    public time: Date;
 }
