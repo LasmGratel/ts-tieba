@@ -3,7 +3,7 @@ import * as parser from './parser';
 // tslint:disable-next-line:prefer-const
 async function main() {
     const forum = JSON.parse(fs.readFileSync('228500.json').toString());
-    for (let key in forum.postIds) {
+    for (const key in forum.postIds) {
         if (forum.postIds.hasOwnProperty(key) && !fs.existsSync('posts/' + forum.postIds[key] + '.json')) {
             console.log('Requesting ' + forum.postIds[key]);
             const post = await parser.getPost(forum.postIds[key]);

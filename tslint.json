@@ -12,7 +12,8 @@
         "max-classes-per-file": false,
         "interface-name": false,
         "prefer-for-of": false,
-        "new-parens": false
+        "new-parens": false,
+        "no-console": false
     },
     "rulesDirectory": []
 }
