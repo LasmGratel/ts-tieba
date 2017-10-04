@@ -9,11 +9,12 @@ export class Forum {
     public memberCount: number;
     public memberName: string;
     public postNum: number;
+    public postIds: number[] = new Array<number>();
 }
 
 export class Post {
     public id: number;
-    public forum: Forum = new Forum();
+    public forumId: number;
     public user: User;
     public replies: Reply[] = new Array<Reply>();
     public time: Date;
